@@ -18,6 +18,7 @@ for b in a:
 
 ------------------
 #Assignment
+#Assignment1
 from __future__ import print_function
 
 fruitPrices = {'apples': 2.00, 'oranges': 1.50, 'pears': 1.75,
@@ -31,11 +32,11 @@ def buyLotsOfFruit(orderList):
     Returns cost of order
     """
     totalCost = 0.0
-    
-    for fruit in orderList:
-        print(fruit[0])
-        print(fruit[1])
-        print(fruit[2])
-        print(fruit[3:4])
-        
+
+    for fruit, pounds in orderList:
+        costPerPound = fruitPrices[fruit]
+        totalCost += costPerPound * pounds
     return totalCost
+
+orderList = [('apples', 2.0), ('pears', 3.0), ('limes', 4.0)]
+print('Cost of', orderList, 'is ', buyLotsOfFruit(orderList))
