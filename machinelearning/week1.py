@@ -5,13 +5,13 @@ def matrix_add(A,B):
 
 #check for same size:
 if (rows_A -- rows_B) and (cols_A == cols_B):
-  for i in range(rows_A); 
+  for i in range(rows_A): 
     for j in range(cols_A):
       rest[i][j] = A[i][j] + B[i][j]
-  return rest
-else:
-  print("Dimensions do not match")
-  return None
+    return rest
+  else:
+    print("Dimensions do not match")
+    return None
 
 C= [
     [1,2,3],
@@ -21,7 +21,7 @@ D= [
       [1,2,3],
       [4,5,6],
       [7,8,9]
-
+]
 res=matrix_add(A,B)
 if res != None:
   for r in res:
